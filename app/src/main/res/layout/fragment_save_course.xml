@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SaveCourseFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textViewCourseName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/course_name"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editTextCourseName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/e_g_cse_570"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/textViewCourseDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/course_description"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editTextCourseDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/eg_mobile_device_programming"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/textViewStudyHours"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/nweekly_study_hour_goal"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editTextStudyHours"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/e_g_10"
+                android:importantForAutofill="no"
+                android:inputType="number|numberDecimal"
+                tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/textViewBuildingLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/building_location"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editTextAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/enter_street_address"
+                android:importantForAutofill="no"
+                android:inputType="textPostalAddress"
+                tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/editTextCity"
+                    android:layout_width="151dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/city"
+                    android:importantForAutofill="no"
+                    android:inputType="textPersonName"
+                    tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+                <EditText
+                    android:id="@+id/editTextState"
+                    android:layout_width="98dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/state"
+                    android:importantForAutofill="no"
+                    android:inputType="textPersonName"
+                    tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+                <EditText
+                    android:id="@+id/editTextZipCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/zip_code"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/buttonGetCoordinates"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/get_coordinates" />
+
+                <TextView
+                    android:id="@+id/textViewCoordinates"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/textview"
+                    android:textAlignment="center"
+                    tools:text="(38.227, -85.555)" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/buttonSaveCourse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/save_course" />
+
+            <TextView
+                android:id="@+id/textViewAddDeadline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/nadd_a_deadline"
+                android:textAlignment="center"
+                android:textStyle="bold" />
+
+            <CalendarView
+                android:id="@+id/calendarViewDeadline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/textViewDeadlineDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/date"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewDeadlineInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/deadline_info"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editTextDeadlineInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/e_g_final_project_due"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                tools:ignore="TextContrastCheck" />
+
+            <Button
+                android:id="@+id/buttonSaveReminder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/add_deadline" />
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/textCourseName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="16dp"
+        android:text="@string/course_name_list"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.219" />
+
+    <TextView
+        android:id="@+id/textCourseDesc"
+        android:layout_width="178dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/course_desc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textCourseName"
+        app:layout_constraintHorizontal_bias="0.079"
+        app:layout_constraintStart_toStartOf="@+id/textCourseName"
+        app:layout_constraintTop_toBottomOf="@+id/textCourseName"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textTargetStudyHours"
+        android:layout_width="52dp"
+        android:layout_height="22dp"
+
+        android:text="@string/_0"
+        android:textAlignment="center"
+        app:layout_constraintBaseline_toBaselineOf="@+id/buttonIncrement"
+        app:layout_constraintEnd_toStartOf="@+id/buttonIncrement"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonDecrement" />
+
+    <Button
+        android:id="@+id/buttonDeleteCourse"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+
+        android:background="@color/black"
+        android:text="@string/delete"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonIncrement"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/buttonIncrement"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:text="@string/plus"
+        app:layout_constraintBaseline_toBaselineOf="@+id/buttonDeleteCourse"
+        app:layout_constraintEnd_toStartOf="@+id/buttonDeleteCourse"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textTargetStudyHours"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/buttonDecrement"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:text="@string/minus"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textTargetStudyHours"
+        app:layout_constraintEnd_toStartOf="@+id/textTargetStudyHours"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textCourseDesc"
+        tools:ignore="TouchTargetSizeCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
